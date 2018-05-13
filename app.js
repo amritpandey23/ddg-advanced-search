@@ -25,9 +25,12 @@ function createPlaceholder(query, site, filetype) {
 }
 
 search_button.addEventListener('click', function(e) {
-    e.preventDefault();
-    var link = createPlaceholder(search_bar.value, site_bar.value, filetypes.value)
-    console.log(link);
+    if(!search_bar.value) {
+        e.preventDefault();
+    } else {
+        var link = createPlaceholder(search_bar.value, site_bar.value, filetypes.value)
+        e.target.href = link;
+    }
 });
 
 function toggleTextInput(toggler, inputTarget) {
