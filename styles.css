@@ -1,0 +1,22 @@
+label {
+    font-weight: 500;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.form-element-group {
+    display: inline-block;
+    margin: 1rem 0 0 0;
+}
+.form-element-group label {
+    margin-right: 0.5rem;
+}
+.toggle-form-group {
+    display: block;
+}
+.toggle-form-group .form-element-group {
+    display: inline-block;
+}
