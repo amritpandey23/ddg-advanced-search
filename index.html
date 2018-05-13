@@ -6,23 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DuckDuckGo Advanced Search</title>
     <link rel="stylesheet" href="https://rawgit.com/amritpandeyy/flavoured.css/master/flavoured.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <form action="">
+            <input type="text" id="search_bar">
+            <a href="#" role="button" target="_blank" id="search_button">Search</a>
+            <fieldset>
+                <legend>Custom Search</legend>
 
-    <form action="">
-        <input type="text" id="search_bar">
-        <a href="#" role="button" target="_blank" id="search_button">Search</a>
-        <fieldset>
-            <legend>Options</legend>
-            <label for="site_bar">Site: </label>
-            <input type="text" id="site_bar">
-            <label for="inurl_bar">In URL: </label>
-            <input type="text" id="inurl_bar">
-            <label for="intitle_bar">In Title: </label>
-            <input type="text" id="intitle_bar">
-        </fieldset>
-    </form>
+                <label for="strict">Strict Search</label>
+                <input type="checkbox" id="strict">
 
+                <label for="safe">Safe Search</label>
+                <input type="checkbox" id="safe">
+                
+                <br>
+
+                <div class="form-element-group">
+                    <label for="site_bar">Site: </label>
+                    <input type="text" id="site_bar">
+                </div>
+
+                <div class="form-element-group">
+                    <label for="inurl_bar">Terms in url: </label>
+                    <input type="text" id="inurl_bar">
+                </div>
+
+                <div class="form-element-group">
+                    <label for="intitle_bar">Terms in title: </label>
+                    <input type="text" id="intitle_bar">
+                </div>
+                
+                <div class="form-element-group">
+                    <label for="filetype">Filetype: </label>
+                    <select name="filetypes" id="filetype">
+                        <option value="Null">None</option>
+                        <option value="pdf">PDF</option>
+                        <option value="doc">Doc</option>
+                        <option value="ppt">PPT</option>
+                    </select>
+                </div>
+
+                <div class="toggle-form-group">
+                    <div class="form-element-group">
+                        <input type="checkbox" id="toggle_exclude_site">
+                        <label for="exclude_site_bar">Exclude site:</label>
+                        <input type="text" id="exclude_site_bar" disabled="true">
+                    </div>
+
+                    <div class="form-element-group">
+                        <input type="checkbox" id="toggle_exclude_term">
+                        <label for="exclude_term_bar">Exclude term:</label>
+                        <input type="text" id="exclude_term_bar" disabled="true">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
     <script async="true" src="app.js"></script>
 
 </body>
