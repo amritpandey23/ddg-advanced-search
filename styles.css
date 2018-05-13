@@ -1,7 +1,6 @@
 label {
     font-weight: 500;
 }
-
 .container {
     width: 100%;
     max-width: 720px;
@@ -19,4 +18,19 @@ label {
 }
 .toggle-form-group .form-element-group {
     display: inline-block;
+}
+.search-field {
+    margin: 8rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+}
+.search-btn {
+    margin-left:auto;
+    padding: 0.45rem 1rem;
+    background: #1e90ff;
+    text-decoration: none;
+    color: #f9f9f9;
+}
+.search-input {
+    width: 100%;
 }
