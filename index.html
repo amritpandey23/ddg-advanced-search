@@ -11,8 +11,20 @@
 <body>
     <div class="container">
         <form action="">
-            <input type="text" id="search_bar">
-            <a href="#" role="button" target="_blank" id="search_button">Search</a>
+
+            <div class="search-field">
+                <input type="text" class="search-input" id="search_bar" placeholder="Search">
+                <a href="#" class="search-btn" role="button" target="_blank" id="search_button">Search</a>
+            </div>
+            
+            <div class="form-element-group" style="margin-bottom: 1.5rem;">
+                <label for="pre-config-search">Preconfigured Search: </label>
+                <select name="pre-config-search" id="pre-config-searchs">
+                    <option value="stackoverflow.com">StackOverflow</option>
+                    <option value="amazon.com">Amazon</option>
+                </select>
+            </div>
+
             <fieldset>
                 <legend>Custom Search</legend>
 
