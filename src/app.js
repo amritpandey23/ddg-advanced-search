@@ -100,8 +100,11 @@ elements["search_button"].addEventListener('click', function(e) {
         // Finally set href value of search button to the URL generated
         // from the search object.
         e.target.href = searchItem.createURL();
+
+        elements["search_bar"].value = '';
     }
 });
+
 
 /**
  * REFACTORING
