@@ -9,18 +9,24 @@
 const Search = require('./SearchModel');
 
 /**
+ * Fill Search history with already saved localdata or,
+ * create a new entry. The name of local variable to 
+ * store search history is `historyData`.
+ */
+if (!localStorage.getItem('historyData')) {
+    var historyData = [];
+} else {
+    var historyData = JSON.parse(localStorage.getItem('historyData'));
+}
+populateHistory(historyData);
+
+/**
  * Store all the elements in an object, containg their name
  * as property and DOM objects as their values.
  * It is easy to keep track of all the elements in one object,
  * hence I've created a method that produces an object containing
  * them. To add new DOM object, just add its ID to elementsID array.
  */
-
-if (!localStorage.getItem('historyData')) {
-    var historyData = [];
-} else {
-    var historyData = JSON.parse(localStorage.getItem('historyData'));
-}
 
 var elementID = [
     "search_bar",
@@ -38,8 +44,6 @@ var elementID = [
     "recent_search_list"
 ];
 var elements = collectElements(elementID);
-
-populateHistory(historyData);
 
 // Exclude data are optional hence they needs to be enabled by users to use them.
 // These two lines, add listeners to their respective checkboxes.
