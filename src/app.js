@@ -18,7 +18,7 @@ if (!localStorage.getItem('historyData')) {
 } else {
     var historyData = JSON.parse(localStorage.getItem('historyData'));
 }
-populateHistory(historyData);
+   
 
 /**
  * Store all the elements in an object, containg their name
@@ -44,6 +44,11 @@ var elementID = [
     "recent_search_list"
 ];
 var elements = collectElements(elementID);
+
+
+
+// Fill search history list with old data.
+populateHistory(historyData);
 
 // Exclude data are optional hence they needs to be enabled by users to use them.
 // These two lines, add listeners to their respective checkboxes.
