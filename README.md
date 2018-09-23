@@ -10,4 +10,4 @@ Follow development of ddg-advanced-search [here](https://trello.com/b/wKmv0yad)
 ![Search Results](https://preview.ibb.co/iePd88/2.png)
 
 ### LICENSE
-MIT
+GPLv3
